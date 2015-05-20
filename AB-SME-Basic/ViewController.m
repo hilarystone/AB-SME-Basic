@@ -8,20 +8,37 @@
 
 #import "ViewController.h"
 
+/*
+    add missing import statements here
+*/
+ 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *myLabel;
 
 @end
 
 @implementation ViewController
 
+/*
+    Clicking this button will change the label text
+    to whatever value is set in the builder
+*/
+- (IBAction)myButton:(UIButton *)sender {
+    
+//  add a string tweak here
+    _myLabel.text = labelText;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+// get the sharedInstance and send an event here
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
